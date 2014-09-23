@@ -3,8 +3,9 @@
 # Needs: ggplot2 package
 # Needs: scales package
 # Needs: reshape package
-# WES vcf files to be analysed in the WES repertory
-# WGS vcf files to be analysed in the WGS repertory
+# Needs: biomaRt package
+# WES vcf files should be analysed in the WES repertory
+# WGS vcf files should be analysed in the WGS repertory
 # Works on both UG and HC vcf files
 # aziz.belkadi@inserm.fr
 
