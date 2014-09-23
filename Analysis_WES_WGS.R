@@ -1,11 +1,12 @@
 # Aziz Belkadi july 2014
-# function to draw Depth, GQ and MRR graphes
-# Needs: ggplot2 package
-# Needs: scales package
-# Needs: reshape package
-# Needs: biomaRt package
-# WES vcf files should be analysed in the WES repertory
-# WGS vcf files should be analysed in the WGS repertory
+# Includes 5 functions :
+#   1 Make_all_variants_graphs: Needs ggplot2 and scale packages. Make statistics and draw graphs for variant coverage, genotype quality and Minor allele ratio
+#   2 Make_graph_discordant : Needs reshape and ggplot2 packages. Make statistics and draw graphs for concordant and discordant variant between WES and WGS.
+#   3 Merge_and_write_table : Needs reshape and ggplot2 packages. Make statistics on concordant and discordant variant genotypes
+#   4 Make_graph_coverage : Needs reshape and ggplot2 packages. Make statitics and graphs on gene coverage. Input files need to be arranged as columns containing percetnage of base paires covered by more than 8X tab separated and one gene by raw.
+#   5 Exons_statistics : Needs biomaRt package. takes two parameters : a string type that could be : {'protein_coding','lincRNA','miRNA','snoRNA'} and a boolean plus50 to take into acount or not the 50Bp flanking regions. Make statistics on exons and RNA included in the WES kit.
+# WES vcf files should be in separated files in the WES/ repertory
+# WGS vcf files should be in separated files in the WGS/ repertory
 # Works on both UG and HC vcf files
 # aziz.belkadi@inserm.fr
 
