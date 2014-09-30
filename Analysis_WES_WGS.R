@@ -4,7 +4,7 @@
 #   2 Make_graph_discordant : Needs reshape and ggplot2 packages. Make statistics and draw graphs for concordant and discordant variant between WES and WGS.
 #   3 Merge_and_write_table : Needs reshape and ggplot2 packages. Make statistics on concordant and discordant variant genotypes
 #   4 Make_graph_coverage : Needs reshape and ggplot2 packages. Make statitics and graphs on gene coverage. Input files need to be arranged as columns containing percetnage of base paires covered by more than 8X tab separated and one gene by raw.
-#   5 Exons_statistics : Needs biomaRt package. takes two parameters : a string type that could be : {'protein_coding','lincRNA','miRNA','snoRNA'} and a boolean plus50 to take into acount or not the 50Bp flanking regions. Make statistics on exons and RNA included in the WES kit.
+#   5 Exons_statistics : Needs biomaRt package. takes two parameters : a string type that could be : {'protein_coding','lincRNA','miRNA','snoRNA'} and a boolean plus50 to take into acount or not the 50Bp flanking regions. Needs exome kit interval list in /resources/ repertory. The interval list format should be : chr:beg-end. Make statistics on exons and RNA included in the WES kit.
 # WES vcf files should be in separated files in the WES/ repertory
 # WGS vcf files should be in separated files in the WGS/ repertory
 # Works on both UG and HC vcf files
@@ -887,7 +887,7 @@ goids1 = goids1[1:(which(goids1[,1]==0)[1]-1),]
 
 
 
-interval = read.table("/home/abelkadi/resources/SureSelect-v4plusUTR_baits.interval_list")
+interval = read.table("/resources/SureSelect-v4plusUTR_baits.interval_list")
 
 v=strsplit(as.character(unlist(interval[,1])),":")
 v1 = suppressWarnings(do.call(rbind, v))
