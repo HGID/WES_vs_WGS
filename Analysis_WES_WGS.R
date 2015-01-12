@@ -905,7 +905,7 @@ interval[,3] = v2[,2]
 
 
 
-interval[,1] = factor(interval[,1])
+interval[,1] = as.numeric(interval[,1])
 interval[,2] = as.numeric(interval[,2])
 interval[,3] = as.numeric(interval[,3])
 
